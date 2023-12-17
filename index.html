@@ -4,27 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <p>Welcome to my weather app</p>
+        <p>
+          Welcome to my weather app
+          <span>
+            <img
+              class="weather-logo"
+              src="image/weather logo.webp"
+              alt="weather icon"
+            />
+          </span>
+        </p>
       </header>
-      <main>
-        <h1>Melbourne</h1>
-        <div>
-          <p>Sunday 11:19, fog; <br />Humidity: 95%, Wind: 1.03km/h</p>
+      <main class="main-city">
+        <div class="weather-icon">🌤️</div>
+        <div class="main-city-temperature">
+          <span class="weather-value">20</span>
+          <span class="weather-unit">°C</span>
+          <h1 class="city">Melbourne</h1>
+          <p class="weather-indept-details">
+            <span class="weekday-time">Sunday 11:19</span>, fog; <br />Humidity:
+            <span class="humidity">95%</span>, Wind: <span class="wind-speed">1.03km/h</span> 
+          </p>
         </div>
-        <div>🌤️ 2°C</div>
       </main>
       <footer>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
         </form>
         coded by
         <a href="https://github.com/Candyylee" target="_blank"> Candy Lee</a>
