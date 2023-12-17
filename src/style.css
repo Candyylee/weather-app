@@ -2,6 +2,7 @@ body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/535/original/pexels-codioful-%28formerly-gradienta%29-7130472.jpg?1702777949");
   background-size: cover;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 a {
   color: white;
