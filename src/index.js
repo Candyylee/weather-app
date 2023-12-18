@@ -3,10 +3,14 @@ function getTemperature(response) {
   let roundedTemperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
   let description = document.querySelector("#weatherDescription");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
   temperature.innerHTML = Math.round(roundedTemperature);
   cityElement.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   console.log(response.data);
 }
 
