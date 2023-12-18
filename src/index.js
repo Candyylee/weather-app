@@ -1,8 +1,22 @@
-function searchCity(event) {
+function getTemperature(response) {
+  let temperature = document.querySelector("#weather-value");
+  let roundedTemperature = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
+
+  temperature.innerHTML = Math.round(roundedTemperature);
+  cityElement.innerHTML = response.data.city;
+}
+
+function searchCity(city) {
+  let apiKey = "45b470b3047ca23td5c33ff33062ofb5";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(getTemperature);
+}
+
+function search(event) {
   event.preventDefault();
   let input = document.querySelector("#search-input");
-  let city = document.querySelector("#city");
-  city.innerHTML = input.value;
+  searchCity(input.value);
 }
 let submit = document.querySelector("#search-form");
-submit.addEventListener("submit", searchCity);
+submit.addEventListener("submit", search);
