@@ -26,16 +26,22 @@
         </p>
       </header>
       <main class="main-city">
-        <div class="weather-icon">🌤️</div>
-        <div class="main-city-temperature">
-          <span class="weather-value" id="weather-value"></span>
-          <span class="weather-unit">°C</span>
+        <div class="main-city-info-left">
+          <div>
+            <span class="weather-value" id="weather-value"></span>
+            <span class="weather-unit">°C</span>
+          </div>
+          <div id="weather-icon"></div>
+        </div>
+
+        <div class="main-city-info-right">
           <h1 class="city" id="city"></h1>
           <p class="weather-indept-details">
             <span id="weekday-time"></span>,
             <span id="weatherDescription"></span> <br />
             Humidity: <strong class="humidity" id="humidity"></strong>, Wind:
             <strong class="wind" id="wind"></strong>
+      
           </p>
         </div>
       </main>

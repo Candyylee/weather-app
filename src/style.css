@@ -23,7 +23,7 @@ a {
   color: white;
 }
 .container {
-  padding: 15px 35px;
+  padding: 13px 50px;
   margin: 60px auto;
   max-width: 620px;
   border-radius: 10px;
@@ -45,30 +45,35 @@ a {
   font-size: 16px;
   border-radius: 5px;
   padding: 10px 20px;
-  width: 70%;
+  width: 73%;
 }
 .search-button {
   background: rgb(147, 115, 230);
   color: white;
   border: none;
-  padding: 10px 40px;
+  padding: 10px 43px;
   border-radius: 4px;
   margin-left: 10px;
 }
 .main-city {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+}
+.main-city-info-left {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 20px;
+}
+.main-city-info-right {
+  position: relative;
+  top: 20px;
 }
 .weather-icon {
-  font-size: 150px;
-  text-shadow: 0 20px 30px rgba(50, 38, 77, 0.199);
+  width: 120px;
   position: relative;
-  top: 10px;
-  left: 30px;
-}
-.main-city-temperature {
-  margin-top: 20px;
-  line-height: 1;
+  left: -20px;
 }
 .weather-value {
   font-size: 90px;
@@ -91,6 +96,7 @@ a {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.596);
   line-height: 18px;
+  margin-top: 5px;
 }
 .humidity {
   color: rgb(113, 66, 231);

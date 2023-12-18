@@ -7,13 +7,15 @@ function getTemperature(response) {
   let windElement = document.querySelector("#wind");
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#weekday-time");
-
+  let icon = document.querySelector("#weather-icon");
+  icon.innerHTML = ` <img src="${response.data.condition.icon_url}" class="weather-icon" />`;
   dateElement.innerHTML = formatDate(date);
   temperature.innerHTML = Math.round(roundedTemperature);
   cityElement.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  console.log(response.data);
 }
 function formatDate(date) {
   let days = [
