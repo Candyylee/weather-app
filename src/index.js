@@ -2,9 +2,12 @@ function getTemperature(response) {
   let temperature = document.querySelector("#weather-value");
   let roundedTemperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let description = document.querySelector("#weatherDescription");
 
   temperature.innerHTML = Math.round(roundedTemperature);
   cityElement.innerHTML = response.data.city;
+  description.innerHTML = response.data.condition.description;
+  console.log(response.data);
 }
 
 function searchCity(city) {
