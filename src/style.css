@@ -2,7 +2,6 @@ body {
   background-color: rgb(214, 205, 235);
   background-size: cover;
   color: white;
-
   font-family: "Roboto", sans-serif;
 }
 header {
@@ -41,8 +40,9 @@ a {
   font-size: 16px;
 }
 .search-input {
-  color: rgba(255, 255, 255, 0.596);
   border: none;
+  color: rgb(147, 115, 230);
+  font-size: 16px;
   border-radius: 5px;
   padding: 10px 20px;
   width: 70%;
@@ -59,7 +59,6 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
 .weather-icon {
   font-size: 150px;
   text-shadow: 0 20px 30px rgba(50, 38, 77, 0.199);
@@ -97,8 +96,8 @@ a {
   line-height: 18px;
 }
 .humidity {
-  color: blueviolet;
+  color: rgb(113, 66, 231);
 }
 .wind {
-  color: blueviolet;
+  color: rgb(113, 66, 231);
 }

@@ -15,8 +15,10 @@ function searchCity(city) {
 
 function search(event) {
   event.preventDefault();
+
   let input = document.querySelector("#search-input");
   searchCity(input.value);
 }
 let submit = document.querySelector("#search-form");
 submit.addEventListener("submit", search);
+searchCity("Melbourne");
