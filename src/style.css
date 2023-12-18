@@ -67,9 +67,6 @@ a {
   left: 30px;
 }
 .main-city-temperature {
-  text-align: right;
-  position: relative;
-  right: 30px;
   margin-top: 20px;
   line-height: 1;
 }
