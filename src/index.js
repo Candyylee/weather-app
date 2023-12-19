@@ -51,7 +51,36 @@ function search(event) {
   let input = document.querySelector("#search-input");
   searchCity(input.value);
 }
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <img
+      class="weather-forecast-icon"
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+      alt=""
+      width="50px"
+    />
+    <div class="weather-forecast-temperature">
+      <span class="weather-forecast-temperature-max">
+        <strong>15°</strong>
+      </span>
+      <span class="weather-forecast-temperature-min">9°</span>
+    </div>
+  </div>
+`;
+  });
+
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
 
 let submit = document.querySelector("#search-form");
 submit.addEventListener("submit", search);
 searchCity("Melbourne");
+
+displayForecast();
