@@ -8,6 +8,7 @@ function getTemperature(response) {
   let date = new Date(response.data.time * 1000);
   let dateElement = document.querySelector("#weekday-time");
   let icon = document.querySelector("#weather-icon");
+
   icon.innerHTML = ` <img src="${response.data.condition.icon_url}" class="weather-icon" />`;
   dateElement.innerHTML = formatDate(date);
   temperature.innerHTML = Math.round(roundedTemperature);
@@ -15,7 +16,8 @@ function getTemperature(response) {
   description.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  console.log(response.data);
+
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let days = [
@@ -47,13 +49,19 @@ function searchCity(city) {
 
 function search(event) {
   event.preventDefault();
-
   let input = document.querySelector("#search-input");
   searchCity(input.value);
 }
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "45b470b3047ca23td5c33ff33062ofb5";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+
+}
+function displayForecast(response) {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
+
   days.forEach(function (day) {
     forecastHtml =
       forecastHtml +
@@ -81,6 +89,5 @@ function displayForecast() {
 
 let submit = document.querySelector("#search-form");
 submit.addEventListener("submit", search);
-searchCity("Melbourne");
 
-displayForecast();
+searchCity("Melbourne");
