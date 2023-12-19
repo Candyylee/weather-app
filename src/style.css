@@ -104,3 +104,18 @@ a {
 .wind {
   color: rgb(113, 66, 231);
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  text-align: center;
+}
+.weather-forecast-day {
+  font-size: 16px;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}

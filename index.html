@@ -41,10 +41,26 @@
             <span id="weatherDescription"></span> <br />
             Humidity: <strong class="humidity" id="humidity"></strong>, Wind:
             <strong class="wind" id="wind"></strong>
-      
           </p>
         </div>
       </main>
+      <section class="weather-forecast">
+        <div class="weather-forecast-day">
+          <div class="weather-forecast-date">Tue</div>
+          <img
+            class="weather-forecast-icon"
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+            alt=""
+            width="50px"
+          />
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-max">
+              <strong>15°</strong>
+            </span>
+            <span class="weather-forecast-temperature-min">9°</span>
+          </div>
+        </div>
+      </section>
       <footer>
         <form class="search-form" id="search-form">
           <input
@@ -56,13 +72,13 @@
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
-        coded by
+        It was coded by
         <a href="https://github.com/Candyylee" target="_blank"> Candy Lee</a>
-        , is opened source on
+        , and it's an opened source on
         <a href="https://github.com/Candyylee?tab=repositories" target="_blank"
           >GitHub</a
         >
-        , and website is hosted on
+        , hosted on
         <a href="https://globalweather-forecast.netlify.app" target="_blank"
           >netlify</a
         >.
